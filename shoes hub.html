@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #ff4444;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-info {
+            padding: 1rem;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: #2ecc71;
+            margin-bottom: 1rem;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: #27ae60;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SHOES HUB</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Categories</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="cart-icon">
+                🛒
+                <span class="cart-count">3</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://dukaan.b-cdn.net/700x700/webp/media/2cc7de96-f7b8-4f31-8589-2717cd391d4c.png" alt="Product 1"height="180" width="200">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">PUMA SHOES</h3>
+                    <p class="product-price">Rs.1999</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/556563da5c4d4c1eb8815418984f6e74_9366/Superstar_Shoes_White_IF3654_01_standard.jpg" alt="Product 2"height="180" width="150">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Adidas shoes</h3>
+                    <p class="product-price">Rs.2999</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://www.jiomart.com/images/product/original/rvrgwpjvsp/bruton-trendy-sports-shoes-for-men-blue-product-images-rvrgwpjvsp-0-202209021256.jpg?im=Resize=(600,750)" alt="Product 3"height="180" width="200">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Sketchers shoes</h3>
+                    <p class="product-price">Rs.3999</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="data:image/jpeg;base64,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" alt="Product 4"height="180" width="150">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">GUCCI SHOES</h3>
+                    <p class="product-price">Rs.1299</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
